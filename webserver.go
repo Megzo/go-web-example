@@ -29,6 +29,6 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 
 	mux.Lock()
 	visitorNumber++
-	fmt.Fprintf(w, "Hello from Go on %s, server version is: %s, you are visitor: %d", hostname, version, visitorNumber)
+	fmt.Fprintf(w, "Hello from Go on %s, server version is: %s, you are visitor: %d\n", hostname, version, visitorNumber)
 	mux.Unlock()
 }
