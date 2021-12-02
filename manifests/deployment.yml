@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "djangoappcluster-6c6e"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "djangoappcluster-6c6e"
+  template:
+    metadata:
+      labels:
+        app: "djangoappcluster-6c6e"
+    spec:
+      containers:
+        - name: "djangoappcluster-6c6e"
+          image: "leannetregistry.azurecr.io/djangoappcluster"
+          ports:
+          - containerPort: 80
