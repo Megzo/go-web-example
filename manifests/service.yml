@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "djangoappcluster-6c6e"
+    labels:
+        app: "djangoappcluster-6c6e"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "djangoappcluster-6c6e"
