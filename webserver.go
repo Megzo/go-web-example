@@ -14,8 +14,8 @@ func main() {
 
 	http.HandleFunc("/", HelloHandler)
 
-	fmt.Println("Listening on localhost:8000")
-	http.ListenAndServe(":8000", nil)
+	fmt.Println("Listening on localhost:80")
+	http.ListenAndServe(":80", nil)
 }
 
 // HelloHandler Handle HTTP request
